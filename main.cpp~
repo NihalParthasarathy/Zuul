@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+#include <cstring>
+#include <map>
+
+using namespace std;
+
+int main() {
+  bool playing = true;
+  vector <Room*> vec;
+  while (playing == true) {
+    cout << "You are currently in the lunch room. It is loud" << endl;
+    cout << "There are exits:" << endl;
+    
+  }
+  
+  return 0;
+}
