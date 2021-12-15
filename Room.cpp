@@ -11,7 +11,17 @@ void Room::setRoom() {
   
 }
 
-void Room::northExit() {
+bool Room::northExit() {
   
 }
+bool Room::southExit() {
+  
+}
+bool Room::westExit() {
+
+}
+bool Room::eastExit() {
+
+}
+
 

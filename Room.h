@@ -15,6 +15,10 @@ class Room {
   void setItems();
   
   int mapNumber;
+  bool north;
+  bool south;
+  bool west;
+  bool east;
  private:
 
 
