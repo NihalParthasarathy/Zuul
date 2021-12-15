@@ -7,7 +7,7 @@ using namespace std;
 
 class Room {
  public:
-  void setRoom()
+  char* setRoom();
   void northExit();
   void southExit();
   void westExit();
@@ -19,7 +19,8 @@ class Room {
   bool south;
   bool west;
   bool east;
+  char description[100];
  private:
+  char str[100];
 
-
-}
+};

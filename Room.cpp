@@ -7,11 +7,11 @@
 using namespace std;
 
 
-void Room::setRoom() {
-  
+char* Room::setRoom() {
+  return description;
 }
 
-bool Room::northExit() {
+/*bool Room::northExit() {
   
 }
 bool Room::southExit() {
@@ -23,5 +23,5 @@ bool Room::westExit() {
 bool Room::eastExit() {
 
 }
-
+*/
 
