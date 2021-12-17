@@ -13,6 +13,22 @@ class Room {
   void westExit();
   void eastExit();
   void setItems();
+
+  void lunchRoom();
+  void abandonedRoom();
+  void dungeon();
+  void csRoom();
+  void vault();
+  void courtyard();
+  void mathRoom();
+  void artRoom();
+  void auditorium();
+  void dramaRoom();
+  void gym();
+  void balcony();
+  void library();
+  void lockerRoom();
+  void bathroom();
   
   int mapNumber;
   bool north;
