@@ -13,6 +13,8 @@ class Room {
   void westExit();
   void eastExit();
   void setItems();
+  void currentRoom();
+  void setExit(Room* &tempRoom);
 
   void lunchRoom();
   void abandonedRoom();
@@ -36,6 +38,9 @@ class Room {
   bool west;
   bool east;
   char description[100];
+  bool itemTrue;
+  bool lunchTrue;
+  
  private:
   char str[100];
 

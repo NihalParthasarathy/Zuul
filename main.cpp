@@ -7,10 +7,9 @@
 using namespace std;
 
 int main() {
-  bool lunchRoom = true;
   bool playing = true;
   vector <Room*> vec;
-  map<vector<Room*>, bool> northMap;
+  map<string, Room*> northMap;
   map<vector<Room*>, bool> southMap;
   map<vector<Room*>, bool> westMap;
   map<vector<Room*>, bool> eastMap;
@@ -19,6 +18,13 @@ int main() {
   cout << "I am missing a few things could you get them for me?" << endl;
   cout << "No need to finnish your sentance thank you I need the plastic bag, the baby bag, the sharpie, some socks, and the vending machine bye bye" << endl;
 
+  Room* lunchRoom = new Room();
+  Room* csRoom = new Room();
+
+  lunchRoom->setExit("west", csRoom);
+  
+  Room* currentRoom = lunchRoom;
+  
   for (int t = 0; t < 15; t++) {
     //description = "This is the lunch room";
     strcpy(nRoom->description, " the lunch room it is odly quiet");
@@ -30,8 +36,11 @@ int main() {
      char input[10];
      for (int i = 0; i < vec.size(); i++) {
        cout << "You are in ";
+       
+       currentRoom = currentRoom->getExit("west");
+       
        cout << vec[i]->description << endl;
-       cout << "There is curretly this many items" << endl;
+       cout << "There is a " << endl;
        cout << "There are exits:" << endl;
        vec[i]->auditorium();
        vec[i]->northExit();
@@ -41,6 +50,7 @@ int main() {
        
      }
      
+
      playing = false;
      cout << "Do you want to move(NORTH, SOUTH, WEST, EAST), pick up an item(PICK), drop and item(DROP), or quit the game (QUIT)" << endl;
      cout << " " << endl;

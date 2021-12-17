@@ -11,6 +11,10 @@ char* Room::setRoom() {
   return description;
 }
 
+void Room::setExit(/*Room* &tempRoom*/) {
+ 
+}
+
 void Room::northExit() {
   if (north == true) {
     cout << "NORTH" << endl;
@@ -30,6 +34,10 @@ void Room::eastExit() {
   if (east == true) {
     cout << "EAST" << endl;
   }
+}
+
+void Room::currentRoom() {
+
 }
 
 void Room::lunchRoom() {
