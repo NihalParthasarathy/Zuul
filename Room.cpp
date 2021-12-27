@@ -11,8 +11,10 @@ char* Room::setRoom() {
   return description;
 }
 
-void Room::setExit(/*Room* &tempRoom*/) {
- 
+void Room::setExit() {
+  if (west == true) {
+    
+  }
 }
 
 void Room::northExit() {
@@ -45,6 +47,8 @@ void Room::lunchRoom() {
   south = true;
   west = true;
   east = true;
+  strcpy(des, "This is the lunch room it is very lound");
+  
 }
 void Room::abandonedRoom() {
   north = true;
@@ -63,6 +67,7 @@ void Room::csRoom() {
   south = true;
   west = true;
   east = true;
+  strcpy(des, "This is the CS room it is very computery in here");
 }
 void Room::vault() {
   north = false;
