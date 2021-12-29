@@ -21,6 +21,19 @@ int main() {
 
   Room* lunchRoom = new Room();
   Room* csRoom = new Room();
+  Room* audutorium = new Room();
+  Room* dramaRoom = new Room();
+  Room* artRoom = new Room();
+  Room* mathRoom = new Room();
+  Room* vault = new Room();
+  Room* courtyard = new Room();
+  Room* abandonedRoom = new Room();
+  Room* dungeon = new Room();
+  Room* gym = new Room();
+  Room* balcony = new Room();
+  Room* library = new Room();
+  Room* lockerRoom = new Room();
+  Room* bathroom = new Room();
 
   bool start = true;
 
@@ -76,13 +89,108 @@ int main() {
        
 
        if (strcmp(input, "NORTH") == 0) {
-	 
+	 if (currentRoom == lunchRoom) {
+	   currentRoom = abandonedRoom;
+	   vec[i]->abandonedRoom();
+	 }
+	 else if (currentRoom == gym) {
+           currentRoom = balcony;
+           vec[i]->balcony();
+         }
+         else if (currentRoom == abandonedRoom) {
+           currentRoom = dungeon;
+           vec[i]->dungeon();
+         }
+         else if (currentRoom == audutorium) {
+           currentRoom = lunchRoom;
+           vec[i]->lunchRoom();
+         }
+         else if (currentRoom == csRoom) {
+           currentRoom = vault;
+           vec[i]->vault();
+         }
+         else if (currentRoom == dramaRoom) {
+           currentRoom = audutorium;
+           vec[i]->auditorium();
+         }
+	 else if (currentRoom == mathRoom) {
+           currentRoom = csRoom;
+           vec[i]->csRoom();
+         }
+         else if (currentRoom == artRoom) {
+           currentRoom = mathRoom;
+           vec[i]->mathRoom();
+         }
+	 else if (currentRoom == library) {
+           currentRoom = gym;
+           vec[i]->gym();
+         }
        }
        else if (strcmp(input, "SOUTH") == 0) {
-	 
+	 if (currentRoom == abandonedRoom) {
+           currentRoom = lunchRoom;
+           vec[i]->lunchRoom();
+         }
+         else if (currentRoom == balcony) {
+           currentRoom = gym;
+           vec[i]->gym();
+         }
+         else if (currentRoom == dungeon) {
+           currentRoom = abandonedRoom;
+           vec[i]->abandonedRoom();
+         }
+         else if (currentRoom == lunchRoom) {
+           currentRoom = audutorium;
+           vec[i]->auditorium();
+         }
+         else if (currentRoom == vault) {
+           currentRoom = csRoom;
+           vec[i]->csRoom();
+         }
+         else if (currentRoom == audutorium) {
+           currentRoom = dramaRoom;
+           vec[i]->dramaRoom();
+         }
+         else if (currentRoom == csRoom) {
+           currentRoom = mathRoom;
+           vec[i]->mathRoom();
+         }
+         else if (currentRoom == mathRoom) {
+           currentRoom = artRoom;
+           vec[i]->artRoom();
+         }
+         else if (currentRoom == gym) {
+           currentRoom = library;
+           vec[i]->library();
+         }
+
        }
        else if (strcmp(input, "EAST") == 0) {
-	 
+	 if (currentRoom == csRoom) {
+           currentRoom = lunchRoom;
+           vec[i]->lunchRoom();
+
+         }
+         else if (currentRoom == lunchRoom) {
+           currentRoom = gym;
+           vec[i]->gym();
+         }
+         else if (currentRoom == gym) {
+           currentRoom = lockerRoom;
+           vec[i]->lockerRoom();
+         }
+         else if (currentRoom == lockerRoom) {
+           currentRoom = bathroom;
+           vec[i]->bathroom();
+         }
+          else if (currentRoom == courtyard) {
+           currentRoom = csRoom;
+           vec[i]->csRoom();
+         }
+         else if (currentRoom == artRoom) {
+           currentRoom = audutorium;
+           vec[i]->auditorium();
+         }
        }
        else if (strcmp(input, "WEST") == 0) {
 	 if (currentRoom == lunchRoom) {
@@ -90,7 +198,29 @@ int main() {
 	   vec[i]->csRoom();
 	 
 	 }
+	 else if (currentRoom == gym) {
+	   currentRoom = lunchRoom;
+	   vec[i]->lunchRoom();
+	 }
+	 else if (currentRoom == lockerRoom) {
+	   currentRoom = gym;
+	   vec[i]->gym();
+	 }
+	 else if (currentRoom == bathroom) {
+	   currentRoom = lockerRoom;
+	   vec[i]->lockerRoom();
+	 }
+	  else if (currentRoom == csRoom) {
+           currentRoom = courtyard;
+           vec[i]->courtyard();
+         }
+         else if (currentRoom == audutorium) {
+           currentRoom = artRoom;
+           vec[i]->artRoom();
+         }
+
        }
+      
        else if (strcmp(input, "PICK") == 0) {
 	 
        }
