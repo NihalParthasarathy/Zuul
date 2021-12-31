@@ -1,0 +1,20 @@
+#include "Room.h"
+
+
+#include <iostream>
+#include <vector>
+#include <cstring>
+
+using namespace std;
+
+class Item {
+ public:
+  bool hasSharpie;
+  bool hasPlastic;
+  bool hasBaby;
+  bool hasVending;
+  bool hasSocks;
+
+  void printItems();
+
+};

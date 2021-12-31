@@ -1,3 +1,6 @@
+#ifndef ITEM_H
+#define ITEM_H
+
 #include <iostream>
 #include <vector>
 #include <cstring>
@@ -7,7 +10,7 @@ using namespace std;
 
 class Room {
  public:
-  char* setRoom();
+  char* getDescription();
   void northExit();
   void southExit();
   void westExit();
@@ -31,6 +34,8 @@ class Room {
   void library();
   void lockerRoom();
   void bathroom();
+
+  void printItems();
   
   int mapNumber;
   bool north;
@@ -41,9 +46,25 @@ class Room {
   bool itemTrue;
   bool lunchTrue;
 
+  bool traveledDungeon;
+  /*bool babyBag = false;
+  bool socks = false;
+  bool sharpie = false;
+  bool plasticBag = false;
+  bool vendingMachine = false;*/
+
+  bool hasSharpie;
+  bool hasPlastic;
+  bool hasBaby;
+  bool hasVending;
+  bool hasSocks;
+
+  int i = 0;
   char des[100];
   
  private:
   char str[100];
 
 };
+
+#endif

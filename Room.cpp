@@ -7,14 +7,16 @@
 using namespace std;
 
 
-char* Room::setRoom() {
-  return description;
-}
+
 
 void Room::setExit() {
   if (west == true) {
     
   }
+}
+
+char* Room::getDescription() {
+  return des;
 }
 
 void Room::northExit() {
@@ -42,7 +44,8 @@ void Room::currentRoom() {
 
 }
 
-void Room::lunchRoom() {
+/*void Room::lunchRoom() {
+  
   north = true;
   south = true;
   west = true;
@@ -58,6 +61,7 @@ void Room::abandonedRoom() {
   strcpy(des, "the abandoned room it is very quiet in hear and alot of cobwebs!");
 }
 void Room::dungeon() {
+  
   north = false;
   south = true;
   west = false;
@@ -77,6 +81,7 @@ void Room::vault() {
   west = false;
   east = false;
   strcpy(des, "the vault so this is where all of the schools money is but you need a pascode");
+  cout << "ji" << endl;
 }
 void Room::courtyard() {
   north = false;
@@ -148,4 +153,4 @@ void Room::bathroom() {
   south = false;
   strcpy(des, "the bathroom it stinks");
 }
-
+*/
